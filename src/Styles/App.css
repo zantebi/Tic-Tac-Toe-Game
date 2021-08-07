@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: darkblue;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.dashboard-game{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.start-btn{
+  flex:0.1;
+  background-color: darkgoldenrod;
+  text-shadow: black;
+  margin-top:15%;
+}
+
+.game-header{
+  flex:1;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 200px;
+  text-shadow: 2px 2px darkgoldenrod;
+  font-size: 3rem;
+  animation:tracking-in-expand-fwd .8s cubic-bezier(.215,.61,.355,1.000) both
+}
+
+.turn-header{
+  flex:1;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 50px;
+  text-shadow: 1px 1px darkgoldenrod;
+  font-size: 1rem;
+  animation:tracking-in-expand-fwd .8s cubic-bezier(.215,.61,.355,1.000) both
+}
+
+
+.start-btn:hover{
+  flex:0.1;
+  background-color: darkgoldenrod;
+  text-shadow: black;
+  -webkit-animation:jello-vertical .9s both;animation:jello-vertical .9s both
+}
+
+.game-section{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+}
+
+.board-row{
+flex:1;
+width:25vw;
+}
+
+.box{
+  color:black;
+  height: 25vh;
+  text-align: center;
+  font-size: 7vw;
+  border: 2px solid black;
+  text-shadow: 3px 3px  grey;
+}
+
+.box:hover{
+  color:black;
+  height: 25vh;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.selected-yellow{
+  background-color: yellow;
+  transition: background-color 0.5s ease;
+}
+
+.selected-green{
+  background-color: green;
+  transition: background-color 0.5s ease;
+}
+
+.selected-green:hover{
+  background-color: green;
+  cursor:not-allowed;
+  transition: background-color 0.5s ease;
+}
+
+
+.selected-yellow:hover{
+  background-color: yellow;
+  cursor:not-allowed;
+  transition: background-color 0.5s ease;
+}
+
+
+.win-label{
+  border: 2px solid black;
+  background-color: honeydew;
+  font-size: 2rem;
+  font-style: italic;
+  font-size: large;
+}
+
+
+
+@keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{transform:translateZ(0);opacity:1}}
+
+@-webkit-keyframes jello-vertical{0%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}30%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}40%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}50%{-webkit-transform:scale3d(.85,1.15,1);transform:scale3d(.85,1.15,1)}65%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}75%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}100%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}@keyframes jello-vertical{0%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}30%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}40%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}50%{-webkit-transform:scale3d(.85,1.15,1);transform:scale3d(.85,1.15,1)}65%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}75%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}100%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}
